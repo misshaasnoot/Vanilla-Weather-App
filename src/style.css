@@ -1,1 +1,66 @@
+.weather-app {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 5%;
+}
 
+h1 {
+  color:#878787;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 25px;
+  padding: 3%;
+  margin-bottom: 0;
+}
+
+.conditions {
+  margin-left: 20px;
+}
+.temperature {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 20px;
+}
+
+
+
+.shadow {
+  width: fit-content;
+  display: flex;
+  background-image: url(/media/dot.jpeg);
+  background-repeat: repeat;
+  padding-bottom: 2%;
+  margin: 5% auto;
+}
+
+.falsetab {
+  background-color: #0cd0f3;
+  border-bottom: 1px solid #251f44;
+}
+.falseclose {
+  background-color: #f54291;
+  border-left: 1px solid #251f44;
+  padding: 0 3px;
+}
+
+.container-card {
+  padding: 0%;
+  background-color: #a9fcf5;
+  width: 800px;
+  border: 1px solid #251f44;
+  margin-left: -2%;
+  margin-top: -2%;
+
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  color: black;
+  font-family: "Quantico", sans-serif;
+  margin: 0;
+  padding: 0;
+}
