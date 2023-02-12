@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quantico&display=swap" rel="stylesheet"/>
   <script
   src="https://kit.fontawesome.com/8c9bb54195.js"
-  crossorigin="anonymous"
-></script>
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
 
   <title>Weather App</title>
@@ -27,33 +27,24 @@
           <i class="fas fa-times falseclose"></i>
         </div>
         <h1>
-          <span class="the-city">New York</span>
+          <span id="the-city"></span>
         </h1>
         <ul>
-          <li>
-            Friday, 05:00 pm
-          </li>
-          <li>
-            Clear
+          <li id="current-date"></li>
+          <li id="conditions">
           </li>
         </ul>
         <div class="conditions">
           <div class="row">
             <div class="col-6">
               <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weather image">
-              <span class="temperature">12°C/<a href="#">°F</a></span>
+              <span class="temperature" id="temperature"></span><span class="units">°C/<a href="#">°F</a></span>
             </div>
             <div class="col-6">
               <ul>
-                <li>
-                  Chance of rain: 0%
-                </li>
-                <li>
-                  Humidity: 73%
-                </li>
-                <li>
-                  Wind: 2 km/h
-                </li>
+                <li id="chance-of-rain"></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
