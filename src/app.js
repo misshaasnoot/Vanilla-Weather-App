@@ -30,18 +30,18 @@ function displayTemperature(response) {
   let conditionsElement = document.querySelector("#conditions");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-
-
-
+  let iconElement = document.querySelector("#icon")
 
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
   conditionsElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute("src", ) =
 }
 
 let apiKey = "b56759ebd8a5t745b7782e0304a5ff9o";
-let apiURL = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=${apiKey}&units=metric`;
+let city = "Amsterdam"
+let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(displayTemperature);
