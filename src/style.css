@@ -70,3 +70,47 @@ li::first-letter {
 #icon {
   max-width: 50px;
 }
+
+.city {
+  margin: 10px;
+}
+
+.city-and-search-form {
+  display: flex;
+}
+
+.search-elements {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 40px;
+  height: 41px;
+  width: 100px;
+}
+
+.search-form {
+  font-family: "Quantico", sans-serif;
+  text-transform: capitalize;
+  border: 2px solid #251f44;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  margin: 5px;
+}
+
+#search-button {
+  font-family: "Press Start 2P", sans-serif;
+  text-transform: capitalize;
+  border-bottom: 2px solid #251f44;
+  border-right: 2px solid #251f44;
+  border-top: 3px solid #f54291;
+  border-left: 3px solid #f54291;
+  background-color: #f54291;
+  margin-top: 5px;
+  max-height: 100%
+
+
+
+}
+
+input {
+  border: white;
+}

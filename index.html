@@ -21,14 +21,37 @@
 <body>
   <div class="container">
   <div class="weather-app">
+
     <div class="shadow">
       <div class="container-card">
         <div class="falsetab d-flex justify-content-end">
           <i class="fas fa-times falseclose"></i>
         </div>
-        <h1>
-          <span id="the-city"></span>
-        </h1>
+        <div class="city-and-search-form">
+          <div class="city">
+            <h1>
+            <span id="the-city"></span>
+          </h1>
+        </div>
+          <div class="search-engine">
+            <div class="search-elements">
+              <div class="search-form">
+                <form id="search-form">
+                  <input
+                    type="search"
+                    placeholder="Enter a city"
+                    autocomplete="off"
+                    id="city-input"
+                  />
+              </div>
+              <div class="search-button">
+                <input type="submit" value="search" id="search-button"/>
+              </div>
+            </div>
+        </div>
+
+          </form>
+        </div>
         <ul>
           <li >Last updated: <span id="current-date"></span></li>
           <li id="conditions">
