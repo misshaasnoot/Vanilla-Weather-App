@@ -37,11 +37,14 @@ function displayTemperature(response) {
   conditionsElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute("src", ) =
+  iconElement.setAttribute("src", `media/icons/${response.data.condition.icon}.png`);
+  iconElement.setAttribute("alt", `media/icons/${response.data.condition.icon}.png`)
+
+
 }
 
 let apiKey = "b56759ebd8a5t745b7782e0304a5ff9o";
-let city = "Amsterdam"
+let city = "sydney"
 let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(displayTemperature);

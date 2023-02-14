@@ -66,3 +66,7 @@ li {
 li::first-letter {
   text-transform: capitalize;
 }
+
+#icon {
+  max-width: 50px;
+}
