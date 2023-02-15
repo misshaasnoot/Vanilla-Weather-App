@@ -30,7 +30,8 @@
         <div class="city-and-search-form">
           <div class="city">
             <h1>
-            <span id="the-city"></span>
+              <img src="media/icons/pin.png" alt="pin" id="pin">
+              <span id="the-city"></span>
           </h1>
         </div>
           <div class="search-engine">
@@ -54,20 +55,31 @@
         </div>
         <ul>
           <li >Last updated: <span id="current-date"></span></li>
+          <li id="conditions"></li>
         </ul>
         <div class="conditions">
+
           <div class="row">
             <div class="col-6">
-              <img src="" alt="weather image"
-              id="icon">
-              <span class="temperature" id="temperature"></span><span class="units">°C/<a href="#">°F</a></span>
+              <img src="" alt="weather image" id="icon">
+              <span class="temperature" id="temperature"></span>
+              <span class="units">°C/<a href="#">°F</a></span>
             </div>
             <div class="col-6">
               <ul>
                 <li id="chance-of-rain"></li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-                <li id="conditions"></li>
+                <li>
+                  <img src="media/icons/humidity.png" alt="drop" id="humidity-icon">
+                  Humidity:
+                  <span id="humidity"></span>
+                  %
+                </li>
+                <li>
+                  <img src="media/icons/wind.png" alt="drop" id="wind-icon">
+                  Wind:
+                  <span id="wind"></span>
+                  km/h
+                </li>
               </ul>
             </div>
           </div>

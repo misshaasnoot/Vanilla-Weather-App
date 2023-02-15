@@ -38,20 +38,26 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute("src", `media/icons/${response.data.condition.icon}.png`);
-  iconElement.setAttribute("alt", `media/icons/${response.data.condition.icon}.png`)
+  iconElement.setAttribute("alt", `media/icons/${response.data.condition.icon}.png`);
 }
 
-function search(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  console.log(cityInputElement);
-}
-
+function search(city) {
 let apiKey = "b56759ebd8a5t745b7782e0304a5ff9o";
-let city = "sydney"
 let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
 axios.get(apiURL).then(displayTemperature);
 
+}
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Amsterdam");
+
+
+
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
