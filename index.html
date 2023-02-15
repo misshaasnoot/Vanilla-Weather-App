@@ -45,13 +45,13 @@
                     id="city-input"
                   />
               </div>
-              <div class="search-button">
-                <input type="submit" value="search" id="search-button"/>
-              </div>
+                <div class="search-button">
+                  <input type="submit" value="search" id="search-button"/>
+                </div>
+                </form>
             </div>
-        </div>
+          </div>
 
-          </form>
         </div>
         <ul>
           <li >Last updated: <span id="current-date"></span></li>
@@ -63,7 +63,10 @@
             <div class="col-6 temperature-info" >
               <img src="" alt="weather image" id="icon">
               <span class="temperature" id="temperature"></span>
-              <span class="units">°C/<a href="#" id="fahrenheit-link">°F</a></span>
+              <span class="units">
+                <a href="#" id="celsius-link" class="active">°C</a>
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
             </div>
             <div class="col-6">
               <ul>
