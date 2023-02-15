@@ -24,7 +24,12 @@ h1 {
 .temperature,
 .units {
   font-family: "Press Start 2P", sans-serif;
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.temperature-info {
+  display: flex;
+  align-items: center;
 }
 
 .shadow {
@@ -55,7 +60,6 @@ h1 {
   margin-top: -2%;
 }
 
-
 ul {
   margin: 0;
   padding: 0;
@@ -75,6 +79,8 @@ li::first-letter {
 
 #icon {
   max-width: 50px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .city {
