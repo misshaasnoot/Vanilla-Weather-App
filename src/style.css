@@ -150,3 +150,28 @@ a {
   color: black !important;
   text-decoration: none !important;
 }
+
+.weather-forecast {
+  margin: 20px;
+  text-align: center;
+  font-family: "Quantico", sans-serif;
+  border: 1px dashed black;
+  padding: 5px 10px 5px 10px;
+  background-color: #f7e3f5;
+}
+
+.weather-forecast-temp {
+  font-size: smaller;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.4;
+}
+
+.weather-forecast-image {
+  margin: 3px;
+}
+
+.weather-app-day {
+  border: 1px dashed black;
+}
