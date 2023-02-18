@@ -23,6 +23,30 @@ let now = new Date();
   let dateHeader = document.querySelector("#current-date");
   dateHeader.innerHTML = currentDate;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = "";
+
+  forecastElement.innerHTML = `<div class="row">
+  <div class="col-2 weather-forecast-day">
+    <div class="weather-forecast-date">
+      Thu
+    </div>
+    <img src="media/icons/wind.png" alt="drop" id="wind-icon" class="weather-forecast-image" width="42">
+    <div class="weather-forecast-temp">
+      <span class="weather-forecast-temp-max">
+        18°C /
+      </span>
+      <span class="weather-forecast-temp-min">
+        10°C
+      </span>
+    </div>
+  </div>
+</div>`;
+}
+
+
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -31,6 +55,8 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon")
+
+
 
   celsiusTemperature = response.data.temperature.current;
 
@@ -86,3 +112,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Amsterdam");
+displayForecast();
