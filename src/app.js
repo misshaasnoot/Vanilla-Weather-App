@@ -26,12 +26,13 @@ let now = new Date();
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = "";
-
-  forecastElement.innerHTML = `<div class="row">
+  let forecastHTML = `<div class="row"`;
+  forecastHTML = 
+    forecastHTML +
+  `<div class="row">
   <div class="col-2 weather-forecast-day">
     <div class="weather-forecast-date">
-      Thu
+      Fri
     </div>
     <img src="media/icons/wind.png" alt="drop" id="wind-icon" class="weather-forecast-image" width="42">
     <div class="weather-forecast-temp">
@@ -43,7 +44,9 @@ function displayForecast() {
       </span>
     </div>
   </div>
-</div>`;
+`;
+forecastHTML = forecastHTML + `</div`;
+forecastElement.innerHTML = forecastHTML;
 }
 
 
