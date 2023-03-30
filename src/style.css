@@ -140,7 +140,8 @@ input {
 #pin {
   max-width: 30px;
   max-height: 30px;
-  margin: 7px
+  margin: 7px;
+  color:#f54291;
 }
 
 .temperature-info .active {
