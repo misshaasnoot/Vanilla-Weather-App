@@ -41,7 +41,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(forecast);
   let forecastElement = document.querySelector("#forecast");
 
 
@@ -61,10 +60,10 @@ function displayForecast(response) {
         />
         <div class="weather-forecast-temp">
           <span class="weather-forecast-temp-max">
-            ${Math.round(forecastDay.temperature.maximum)}°   /
+            ${Math.round(forecastDay.temperature.maximum)}°C /
           </span>
           <span class="weather-forecast-temp-min">
-          ${Math.round(forecastDay.temperature.minimum)}°
+          ${Math.round(forecastDay.temperature.minimum)}°C
           </span>
         </div>
       </div>
@@ -102,9 +101,7 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", `media/icons/${response.data.condition.icon}.png`);
 
   getForecast(response.data.coordinates)
-
 }
-
 
 function search(city) {
 let apiKey = "b56759ebd8a5t745b7782e0304a5ff9o";
@@ -112,40 +109,15 @@ let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${api
 axios.get(apiURL).then(displayTemperature);
 }
 
-
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature")
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Amsterdam");
